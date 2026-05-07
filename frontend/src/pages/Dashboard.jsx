@@ -126,7 +126,7 @@ const Dashboard = () => {
         <div className="lg:col-span-1 bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
           <h3 className="text-lg font-bold text-gray-900 mb-6">Pipeline Stages</h3>
           <div className="h-64">
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="99%" height="100%" minWidth={0}>
               <BarChart data={pipelineData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E5E7EB" />
                 <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: '#6B7280', fontSize: 12 }} />
@@ -150,7 +150,7 @@ const Dashboard = () => {
           <h3 className="text-lg font-bold text-gray-900 w-full mb-2">Win / Loss Ratio</h3>
           <div className="h-64 w-full">
             {pieData.length > 0 ? (
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveContainer width="99%" height="100%" minWidth={0}>
                 <PieChart>
                   <Pie
                     data={pieData}

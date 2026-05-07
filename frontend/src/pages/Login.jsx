@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Lock, Mail, LayoutDashboard } from 'lucide-react';
 
 const Login = () => {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { login } = useContext(AuthContext);
